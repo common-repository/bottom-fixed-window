@@ -1,0 +1,15 @@
+{
+    "name": "cancms/float_bar",
+    "description": "a fixed bar at the bottom to display ads or forms",
+    "authors": [
+        {
+            "name": "cancms",
+            "email": "cancms@163.com"
+        }
+    ],
+    "require": {},
+
+    "autoload": {
+        "psr-4": {"CancmsPlugin\\": "src/"}
+    }
+}

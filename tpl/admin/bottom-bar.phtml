@@ -1,0 +1,39 @@
+<div class="wrap">
+    <h2><?php _e('Cancms Bottom Bar', CANCMS_FLOATBAR_PLUGIN); ?></h2>
+
+    <form method="post" action="options.php">
+        <?php settings_fields( $cancmsFloatBarSettingGroup ); // 设置字段 这个函数取代了 nonce magic, action field, and page_options ?>
+        <?php do_settings_sections( $cancmsFloatBarSettingGroup ); // 这个函数取代了表单字段标记形式本身 ?>
+        <table class="form-table">
+            <tr valign="top">
+                <th scope="row"><?php _e('Bar div style', CANCMS_FLOATBAR_PLUGIN); ?></th>
+                <td>
+                    <input type="text"
+                           name="<?php echo $options['bar_height'];?>"
+                           value="<?php echo esc_attr( get_option($options['bar_height'], ' height: 130px; ') );
+                           ?>"
+                           style="width: 100%";
+                    />
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <th scope="row"><?php _e('Bar content', CANCMS_FLOATBAR_PLUGIN); ?></th>
+                <td>
+                    <!--<textarea  name="cancms_bottom_bar_html_content">
+                        <?php /*echo esc_attr( get_option('cancms_bottom_bar_html_content') ); */?>
+                    </textarea>-->
+
+                    <?php
+                    $content = get_option($options['bar_content']);
+                    wp_editor( htmlspecialchars_decode($content), 'cancms_bottom_bar_content', array(
+                            'textarea_name' => $options['bar_content']
+                    ));
+                    ?>
+                </td>
+            </tr>
+
+        </table>
+        <?php submit_button(); ?>
+    </form>
+</div>

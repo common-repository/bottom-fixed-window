@@ -1,0 +1,35 @@
+﻿
+#cancms_float_bar_fixed_bottom {
+    position:fixed;
+	left:0px;
+	bottom:0px;
+	height:130px;
+	width:100%;
+	background:#999;
+	overflow: hidden;
+
+}
+
+#cancms_float_bar_fixed_bottom .cc-handle-button{
+	float:right;
+	cursor:pointer;
+	color: #fff;
+	border: 1px solid #AEAEAE;
+	/*border-radius: 30px;*/
+	background: brown;
+	font-size: 20px;
+	font-weight: bold;
+	display: inline-block;
+	line-height: 0px;
+	padding: 11px 5px;
+	margin: 2px;
+}
+#cancms_float_bar_fixed_bottom .cc-collapsed{
+
+}
+#cancms_float_bar_fixed_bottom .cc-expanded{
+}
+#cancms_float_bar_fixed_bottom div.wpcf7-response-output {
+	margin: 0px !important;
+}
+
